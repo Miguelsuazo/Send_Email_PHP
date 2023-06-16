@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background-color: #005E7C;
+    
+}
+
+
+
+.container{
+    width: 660px;
+    border-radius: 5px;
+    background-color: #fff;
+
+}
+
+.container header{
+    font-weight: 700;
+    font-size:30;
+    padding: 30px 30px;
+    border-bottom: 0.5px solid gray;
+}
+
+
+.container form{
+    margin: 30px 35px;
+}
+
+form .field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.field .field-in{
+    position: relative;
+    height: 50px;
+    width: calc(100% / 2 - 15px);
+    
+}
+
+form .field-in input, 
+form .message textarea{
+    height: 100%;
+    width: 100% ;
+    outline: none;
+    padding: 0 50px 3px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid rgb(185, 183, 183);
+}
+
+form .field-in input::placeholder, 
+form .message textarea::placeholder{
+    color:rgb(106, 112, 112) ;
+}
+
+.container form i{
+    position: absolute;
+    left: 18px;
+    top: 29% ;
+    font-size: 20px;
+    transform: translateY(- 50%); 
+    color:rgb(185, 183, 183);
+}
+
+form .message i{
+    position: relative;
+    top: -90%;
+ 
+    
+}
+
+form .message textarea{
+    min-height: 120px;
+    padding: 15px 20px 0 48px;
+}
+
+form .field-in input:focus,
+form .message textarea:focus{
+    border: 2px solid #005E7C;
+}
+
+form .field-in input:focus ~ i,
+form .message textarea:focus ~ i {
+    color: #005E7C;
+}
+
+form .button-place{
+    display: flex;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.button-place button{
+    padding: 12px 20px;
+    border: none;
+    font-size: 18px;
+    background-color: #005E7C;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 28px;
+}
+
+.button-place button:hover{
+    background-color: #05B2DC;
+ 
+}
+.button-place span{
+    color: #005E7C;
+    font-size: 18px;
+    display: none;
+
+}
+
+.message{
+    height: 150px;
+}
+
+@media(max-width:600px){
+    .container header{
+        text-align: center;
+        
+    }
+
+    form .field{
+        flex-direction: column;
+        margin-bottom: 2px;
+    }
+    .field .field-in{
+        width: 100%;
+        margin-bottom: 12px
+    }
+
+    form .button-place{
+        flex-direction: column;
+    }
+    .button-place button{
+        width: 80%;
+
+    }
+    .button-place span{
+        text-align: center;
+        margin: 20px 12px;
+    }
+}
+
